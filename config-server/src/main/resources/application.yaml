@@ -5,13 +5,15 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native # Local file system එකෙන් configs ගන්නා බව දැක්වීමට
+    active: git # Local file system එකෙන් configs ගන්නා බව දැක්වීමට
   cloud:
     config:
       server:
         git:
           uri: https://github.com/Shavindi0609/eca-configurations.git
           search-paths: platform,services
+          default-label: main
+          clone-on-start: true
         native:
           search-locations:
             - classpath:/configurations # කලින් හැදූ config folder එකේ path එක
