@@ -1,0 +1,33 @@
+#server:
+#  port: 8089
+#
+#spring:
+#  application:
+#    name: api-gateway
+#
+#  config:
+#    import: "configserver:http://localhost:8088"
+#
+#  cloud:
+#    gateway:
+#      server:
+#        webmvc:
+#          routes:
+#            - id: user-service
+#              uri: lb://USER-SERVICE
+#              predicates:
+#                - Path=/api/users/**
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8080/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true
+
+spring:
+  application:
+    name: api-gateway
+
+  config:
+    import: "configserver:http://localhost:8088"
