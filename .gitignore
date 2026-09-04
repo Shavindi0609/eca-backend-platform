@@ -16,10 +16,11 @@ target/
 Thumbs.db
 
 # Environment files
-.env
 
 # Java HotSpot error logs
 hs_err_pid*.log
 
 Library_Microservices.postman_collection.json
 /Library_Microservices.postman_collection.json
+config.bat
+node_modules
